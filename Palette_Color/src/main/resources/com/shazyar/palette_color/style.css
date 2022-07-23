@@ -1,0 +1,219 @@
+@font-face{
+	src: url("./JetBrainsMono-Light.ttf");
+
+}
+
+.background{
+    -fx-background-color: #F9FBFC;
+}
+
+.title{
+    -fx-font: 28px "JetBrains Mono Light";
+    -fx-fill: #424242;
+}
+
+.label-text{
+    -fx-font: 14px "JetBrains Mono Light";
+    -fx-text-fill: #424242;
+}
+
+.tf{
+       -fx-background-color: #fff;
+       -fx-background-radius: 7px;
+       -fx-border-color: #eee;
+       -fx-border-width: 2px;
+       -fx-border-radius: 7px;
+       -fx-font: 14px "JetBrains Mono Light";
+}
+
+.search-box{
+	-fx-border-color: #eee;
+	-fx-border-width: 1px;
+	-fx-border-radius: 7px;
+	-fx-padding: 2px;
+}
+
+.search-tf{
+	-fx-background-color: transparent;
+	-fx-font: 14px "JetBrains Mono Light";
+	-fx-text-fill: #424242;
+}
+
+.btn{
+    -fx-background-color: #1976d2;
+    -fx-background-insets: 0.7px;
+    -fx-background-radius: 7px;
+    -fx-border-color: #fff;
+    -fx-border-width: 0.7px;
+    -fx-border-radius: 7px;
+    -fx-font: 16px "JetBrains Mono Light";
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+
+.alert-success{
+	-fx-font: 18px "JetBrains Mono Light";
+	-fx-text-fill: #62a36d;
+	-fx-padding: 10px;
+	-fx-border-color: #D4EDDA;
+	-fx-border-width: 1px;
+	-fx-border-radius: 7px;
+	-fx-background-radius: 7px;
+	-fx-background-color: #D4EDDA;
+
+}
+
+.alert-danger{
+	-fx-font: 18px "JetBrains Mono Light";
+	-fx-text-fill: #d9534f;
+	-fx-padding: 10px;
+	-fx-border-color: #f8d7da;
+	-fx-border-width: 1px;
+	-fx-border-radius: 7px;
+	-fx-background-radius: 7px;
+	-fx-background-color: #f8d7da;
+
+}
+
+.alert-message{
+    -fx-font: 18px "JetBrains Mono Light";
+}
+
+.red-color{
+    -fx-text-fill: #d91e18;
+    -fx-fill: #d91e18;
+}
+
+.green-color{
+    -fx-text-fill: #019875;
+    -fx-fill: #019875;
+}
+
+.content-background{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+}
+
+.content-txt{
+     -fx-font:  14px "JetBrains Mono Light";
+}
+
+
+.custom-label-text{
+    -fx-font: 18px "JetBrains Mono Light";
+    -fx-fill: #424242;
+    -fx-text-fill: #424242;
+
+}
+
+.custom-text-field{
+    -fx-background-color: #fff;
+    -fx-background-radius: 7px;
+    -fx-border-color: #eee;
+    -fx-border-radius: 7px;
+    -fx-font: 16px "JetBrains Mono Light";
+}
+
+.custom-button{
+    -fx-background-color: #fff;
+    -fx-background-radius: 7px;
+    -fx-border-color: #eee;
+    -fx-border-radius: 7px;
+    -fx-font: 16px "JetBrains Mono Light";
+    -fx-cursor: hand;
+}
+
+.custom-button:hover{
+	-fx-background-color: #eee;
+}
+
+.list-btn{
+        -fx-background-color: transparent;
+        -fx-background-radius: 7px;
+        -fx-border-color: transparent;
+        -fx-border-radius: 7px;
+        -fx-font: 16px "JetBrains Mono Light";
+        -fx-cursor: hand;
+}
+
+.list-text{
+    -fx-font: 12px "JetBrains Mono Light";
+    -fx-fill-color: #424242;
+    -fx-fill: #424242;
+}
+
+
+.square-view{
+    -fx-background-radius: 7px;
+}
+
+/* Scroll Design */
+
+.scroll{
+    -fx-background-color: #fff;
+    -fx-border-color: #fff;
+    -fx-border-width: 0px;
+}
+
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color : #fff;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color : #fff;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color : #9e9e9e;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color : #9e9e9e;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+    -fx-cursor: hand;
+}
+
+/* List Design */
+
+.custom-list{
+     -fx-background-color: #fff;
+     -fx-border-color: #eee;
+     -fx-border-width: 1px;
+     -fx-background-radius: 7px;
+     -fx-border-radius: 7px;
+}

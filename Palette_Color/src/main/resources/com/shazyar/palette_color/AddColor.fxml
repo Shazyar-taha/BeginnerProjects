@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<?import com.shazyar.service.AlertMessage?>
+<AnchorPane prefHeight="470.0" prefWidth="380.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shazyar.palette_color.color.AddColorController">
+   <children>
+      <Text layoutX="126.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Add Color" />
+      <ComboBox fx:id="groupCombo" layoutX="68.0" layoutY="144.0" prefHeight="41.0" prefWidth="254.0" promptText="group" styleClass="tf" />
+      <Label layoutX="75.0" layoutY="120.0" styleClass="label-text" text="Group " />
+      <Label layoutX="75.0" layoutY="196.0" styleClass="label-text" text="Color" />
+      <TextField fx:id="colorTf" layoutX="68.0" layoutY="215.0" onAction="#addColor" prefHeight="41.0" prefWidth="254.0" styleClass="tf" />
+      <Button layoutX="68.0" layoutY="275.0" mnemonicParsing="false" onAction="#addColor" prefHeight="41.0" prefWidth="254.0" styleClass="btn" text="Add" />
+      <HBox alignment="CENTER" layoutX="5.0" layoutY="332.0" prefHeight="66.0" prefWidth="384.0">
+         <children>
+            <AlertMessage fx:id="alertMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="296.0" styleClass="alert-success" textAlignment="CENTER" visible="false" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

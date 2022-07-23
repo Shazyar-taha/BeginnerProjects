@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="1000.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shazyar.palette_color.PaletteColorController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="136.0" layoutY="86.0" prefHeight="481.0" prefWidth="733.0" styleClass="scroll" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <content>
+            <FlowPane fx:id="colorContainer" hgap="10.0" prefHeight="900.0" prefWidth="740.0" styleClass="content-background" vgap="10.0">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+      <ListView fx:id="groupColorList" layoutX="14.0" layoutY="144.0" prefHeight="481.0" prefWidth="250.0" styleClass="custom-list" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+      <Pane fx:id="squareView" layoutX="906.0" layoutY="20.0" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: aqua;" styleClass="square-view">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Label fx:id="copyTxt" layoutX="16.0" layoutY="57.0" text="Copied" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <HBox alignment="CENTER_LEFT" layoutX="261.0" layoutY="12.0" prefHeight="40.0" prefWidth="639.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="173.0">
+               <children>
+                  <Text fontSmoothingType="LCD" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="custom-label-text" text="Hex :" wrappingWidth="57.9814453125">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="hexTf" editable="false" prefHeight="38.0" prefWidth="115.0" styleClass="custom-text-field" text="ddd" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="230.0">
+               <children>
+                  <Text fontSmoothingType="LCD" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="custom-label-text" text="HSL :" wrappingWidth="57.9814453125">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="hslTf" editable="false" prefHeight="38.0" prefWidth="181.0" styleClass="custom-text-field" text="(22, 80, 100%)" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="235.0">
+               <children>
+                  <Text fontSmoothingType="LCD" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="custom-label-text" text="RGB :" wrappingWidth="60.9814453125">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="rgbTf" editable="false" prefHeight="38.0" prefWidth="185.0" styleClass="custom-text-field" text="(255, 255, 255)" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="260.0" layoutY="64.0" prefHeight="40.0" prefWidth="639.0" spacing="10.0">
+         <children>
+            <ColorPicker fx:id="colorPicker" prefHeight="38.0" prefWidth="188.0" styleClass="custom-text-field" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="191.0" layoutY="10.0" mnemonicParsing="false" onAction="#copyColor" prefHeight="38.0" prefWidth="120.0" styleClass="custom-button" text="Insert">
+               <graphic>
+                  <MaterialDesignIconView fill="#424242" glyphName="CONTENT_COPY" size="22" />
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="280.0" layoutY="11.0" mnemonicParsing="false" onAction="#insertGroup" prefHeight="38.0" prefWidth="120.0" styleClass="custom-button" text="addGroup">
+               <graphic>
+                  <FontAwesomeIconView fill="#424242" glyphName="FOLDER" size="22" />
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#insertColor" prefHeight="38.0" prefWidth="120.0" styleClass="custom-button" text="addColor">
+               <graphic>
+                  <MaterialDesignIconView fill="#424242" glyphName="PLUS" size="22" />
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="191.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteColor" prefHeight="38.0" prefWidth="120.0" styleClass="custom-button" text="Delete">
+               <graphic>
+                  <MaterialDesignIconView fill="#ee1313" glyphName="DELETE" size="22" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="5.0" layoutY="65.0" prefHeight="38.0" prefWidth="250.0" styleClass="search-box">
+         <children>
+            <FontAwesomeIconView fill="#424242" glyphName="SEARCH" size="20" />
+            <TextField fx:id="hslTf1" prefHeight="37.0" prefWidth="218.0" promptText="search" styleClass="search-tf" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
